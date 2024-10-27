@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* --------BANNER----------- */
+
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), #009688), url(img/hotel3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 180px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    border-radius: 30%;
+}
+
+.banner-text {
+    text-align: center;
+    color: #fff;
+    padding-top: 180px;
+}
+
+.banner-text h1 {
+    font-size: 130px;
+    font-family: "Pacifico", cursive;
+}
+
+.banner-text p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.banner-btn {
+    margin: 70px auto 0;
+}
+
+.banner-btn a {
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: .5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+.banner-btn a span {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+    width: 100%;
+}
+
+.banner-btn a:hover {
+    color: #000;
+}
+
+/* --------NAVBAR----------- */
+
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: #009688;
+    z-index: 2;
+    transition: transform 0.4s;
+    transform: translateX(100%);
+}
+
+#sideNav.show {
+    transform: translateX(0);
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #004a43;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* Recommend Destination */
+
+#rcm-details {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.rcm_content {
+    background: linear-gradient(to top, #fff, #009688);
+}
+
+.rcm_content h1 {
+    font-family: "Playwrite US Trad", cursive;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    font-style: normal;
+    color: #ffffff;
+}
+
+#rcm-details .img-ctr {
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+    transform-origin: center;
+    transform: perspective(800px) rotateY(25deg);
+    transition: transform 0.5s;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng nhẹ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#rcm-details .img-ctr img {
+    width: 100%;
+    filter: grayscale(60%);
+    border-radius: 15px;
+}
+
+#rcm-details .img-ctr h2 {
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
+    bottom: 10px;
+    left: 10px;
+    transition: opacity 0.5s;
+    opacity: 0;
+    margin: 0;
+}
+
+#rcm-details .img-ctr:hover h2 {
+    opacity: 1;
+}
+
+#rcm-details .img-ctr:hover {
+    transform: perspective(800px) rotateY(0deg);
+}
+
+#rcm-details .img-ctr img:hover {
+    filter: grayscale(0%);
+}
+
+/* Service */
+
+#srv-details {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 3%;
+    position: relative;
+}
+
+.srv_content h1 {
+    font-family: "Playwrite US Trad", cursive;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+    font-style: normal;
+    color: #009688;
+}
+
+.srv_content {
+    background: linear-gradient(to bottom, #fff, #009688);
+}
+
+#srv-details .img-ctr {
+    width: 45%;
+    /* Giảm chiều rộng để còn trống các phần khác */
+    position: relative;
+    /* Sử dụng relative thay vì absolute */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    /* Giảm chiều cao để không quá lớn */
+    margin-bottom: 30px;
+    /* Khoảng cách giữa các hình ảnh */
+    overflow: hidden;
+    /* Ẩn phần dư thừa nếu có */
+    border-radius: 10px;
+    /* Bo tròn góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng nhẹ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#srv-details .img-ctr img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#srv-details .img-ctr:hover {
+    transform: scale(1.05);
+    /* Phóng to hình ảnh khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng lớn hơn */
+}
+
+#srv-details .img-ctr .img-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Nền mờ */
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+#srv-details .img-ctr:hover .img-info {
+    transform: translateY(0);
+    /* Hiện thông tin khi hover */
+}
+
+#srv-details .img-ctr .img-info h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+#srv-details .img-ctr .img-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* FOOTER */
+
+.footer-distributed {
+    background-color: #292c2f;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-left img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-center h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #009688;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #009688;
+}
+
+.footer-center .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.footer-center i {
+    color: #009688;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.footer-center p {
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-company-about span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #009688;
+}
+
+#newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#newsletter-email {
+    padding: 10px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    margin-right: -1px;
+    flex: 1;
+    max-width: 200px;
+}
+
+#newsletter-form button {
+    padding: 10px 20px;
+    background-color: #009688;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#newsletter-form button:hover {
+    background-color: #00796b;
+}
+
+.footer-icons {
+    margin-top: 20px;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #009688;
+}
+
+.footer-bottom {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#scrollToTopButton {
+    background-color: #009688;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+#scrollToTopButton:hover {
+    background-color: #00796b;
+}
+
+@media (max-width: 768px) {
+    .footer-distributed {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        padding-top: 10px;
+    }
+}

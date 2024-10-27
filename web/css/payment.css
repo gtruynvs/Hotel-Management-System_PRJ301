@@ -1,0 +1,337 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Payment Section */
+.payment-section {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.payment-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.payment-left, .payment-right {
+    flex: 1;
+    padding: 40px;
+}
+
+.payment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.payment-header-icon {
+    font-size: 28px;
+    color: #4CAF50; /* Green tone */
+    margin-right: 15px;
+}
+
+.payment-header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.payment-header-description {
+    margin: 0;
+    color: #777;
+}
+
+.payment-content {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.payment-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.payment-plan-type {
+    font-weight: bold;
+    color: #333;
+}
+
+.payment-plan-info-price {
+    font-size: 20px;
+    color: #4CAF50; /* Green tone */
+    font-weight: bold;
+}
+
+.payment-plan-change {
+    text-decoration: none;
+    color: #4CAF50; /* Green tone */
+    font-weight: bold;
+}
+
+.payment-summary {
+    margin-top: 30px;
+}
+
+.payment-summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.payment-summary-divider {
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.payment-summary-total .payment-summary-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.payment-right {
+    background-color: #f9f9f9;
+    border-left: 1px solid #eee;
+    padding: 40px;
+}
+
+.payment-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.payment-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.payment-method {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.payment-method-item {
+    position: relative;
+    width: 50%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.payment-method input[type="radio"]:checked + .payment-method-item {
+    border-color: green; /* Adjust border color as needed */
+}
+
+.payment-method-item img {
+    max-width: 90%; /* Adjust to fit within the square */
+    max-height: 90%; /* Adjust to fit within the square */
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Add some hover effect */
+.payment-method-item:hover {
+    border-color: lightgray;
+}
+
+.hidden-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Enhanced Input Fields */
+.payment-form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.payment-form-control {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.payment-form-control:focus {
+    border-color: #4CAF50; /* Green tone */
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.payment-form-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #777;
+    transition: top 0.2s, font-size 0.2s;
+}
+
+.payment-form-control:focus + .payment-form-label,
+.payment-form-control:not(:placeholder-shown) + .payment-form-label {
+    top: -20px;
+    font-size: 16px;
+    color: #4CAF50;
+}
+
+.payment-form-label-required::after {
+    content: '*';
+    color: #4CAF50; /* Green tone */
+}
+
+.payment-form-group-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-form-group-flex .payment-form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.payment-form-group-flex .payment-form-group:last-child {
+    margin-right: 0;
+}
+
+.payment-form-submit-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50; /* Green tone */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.payment-form-submit-button:hover {
+    background-color: #388E3C; /* Darker green tone */
+    transform: scale(1.05);
+}
+
+.payment-form-submit-button i {
+    margin-right: 5px;
+}
+
+/* Cancel Button */
+.payment-form-cancel-button {
+    width: 100%;
+    padding: 14px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.payment-form-cancel-button:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+}
+
+.payment-form-cancel-button i {
+    margin-right: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-button {
+    background-color: #4CAF50; /* Green tone */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+    font-size: 16px;
+}
+
+.modal-button:hover {
+    background-color: #388E3C; /* Darker green tone */
+    transform: scale(1.05);
+}
+
+.modal-button.cancel {
+    background-color: #d9534f;
+}
+
+.modal-button.cancel:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+}
